@@ -1,0 +1,15 @@
+name: 'Wait for Vercel Preview'
+description: "Wait for Vercel Deploy Preview to complete, requires to be run on pull_request"
+branding:
+  icon: "clock"
+  color: "blue"
+inputs:
+  GITHUB_TOKEN:
+    description: "The Github Secret"
+    required: true
+outputs:
+  url:
+    description: "The fully qualified deploy preview URL"
+runs:
+  using: "node12"
+  main: "index.js"

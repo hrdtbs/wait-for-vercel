@@ -1,0 +1,23 @@
+{
+  "name": "wait-for-vercel",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier src/index.ts --write",
+    "build": "ncc build src/index.ts -o ./ -m",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^2.2.0",
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.24.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
+  }
+}
