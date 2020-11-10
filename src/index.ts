@@ -1,5 +1,5 @@
-import core from "@actions/core";
-import github from "@actions/github";
+import * as core from "@actions/core";
+import * as github from "@actions/github";
 import axios from "axios";
 
 const waitForUrl = async (url: string, maxTimeout: number) => {
@@ -133,7 +133,8 @@ const run = async () => {
     console.log(`Waiting for a status code 200 from: ${targetUrl}`);
     await waitForUrl(targetUrl, MAX_TIMEOUT);
   } catch (error) {
-    core.setFailed(error.message);
+    console.error(error.message)
+    core?.setFailed(error.message);
   }
 };
 

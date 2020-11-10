@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier src/index.ts --write",
-    "build": "ncc build src/index.ts -o ./ -m",
+    "build": "ncc build src/index.ts -o ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
