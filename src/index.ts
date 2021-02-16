@@ -66,7 +66,7 @@ const waitForStatus = async (
 const run = async () => {
   try {
     const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN", { required: true });
-    const MAX_TIMEOUT = 60;
+    const MAX_TIMEOUT = 60 * 10;
     if (!GITHUB_TOKEN) {
       core.setFailed("Required field `GITHUB_TOKEN` was not provided");
     }
