@@ -7,6 +7,10 @@ inputs:
   GITHUB_TOKEN:
     description: "The Github Secret"
     required: true
+  MAX_TIMEOUT:
+    description: The max time to run the action (in seconds)
+    required: false
+    default: "120"
 outputs:
   url:
     description: "The fully qualified deploy preview URL"

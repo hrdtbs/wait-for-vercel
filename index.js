@@ -28433,7 +28433,7 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     try {
         const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN", { required: true });
-        const MAX_TIMEOUT = 60 * 10;
+        const MAX_TIMEOUT = parseInt(core.getInput("MAX_TIMEOUT"), 10) || 60 * 10;
         if (!GITHUB_TOKEN) {
             core.setFailed("Required field `GITHUB_TOKEN` was not provided");
         }
